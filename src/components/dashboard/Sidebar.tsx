@@ -1,4 +1,4 @@
-import { Home, Users, Bell, LineChart, DollarSign, TrendingUp, BarChart2, Network, Menu, HeadphonesIcon, BarChart } from "lucide-react";
+import { Home, Users, Bell, LineChart, DollarSign, TrendingUp, BarChart2, Network, Menu, HeadphonesIcon, BarChart, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface SidebarProps {
@@ -88,6 +88,12 @@ const Sidebar = ({ onClose, onNavigate, activeView }: SidebarProps) => {
           label="Telecom Industry" 
           active={activeView === "telecom-industry"}
           onClick={() => handleNavigation("telecom-industry")}
+        />
+        <SidebarItem 
+          icon={<AlertTriangle size={20} />} 
+          label="Common Issues" 
+          active={activeView === "common-issues"}
+          onClick={() => handleNavigation("common-issues")}
         />
         <SidebarItem 
           icon={<Bell size={20} />} 

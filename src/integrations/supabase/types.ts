@@ -321,6 +321,36 @@ export type Database = {
         }
         Relationships: []
       }
+      telecom_common_issues: {
+        Row: {
+          created_at: string
+          frequency: string
+          id: string
+          impact_level: string
+          issue_type: string
+          provider: string
+          resolution_time_hours: number
+        }
+        Insert: {
+          created_at?: string
+          frequency: string
+          id?: string
+          impact_level: string
+          issue_type: string
+          provider: string
+          resolution_time_hours: number
+        }
+        Update: {
+          created_at?: string
+          frequency?: string
+          id?: string
+          impact_level?: string
+          issue_type?: string
+          provider?: string
+          resolution_time_hours?: number
+        }
+        Relationships: []
+      }
       telecom_industry_analysis: {
         Row: {
           annual_investment: number | null
