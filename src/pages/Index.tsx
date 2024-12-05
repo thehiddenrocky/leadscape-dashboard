@@ -43,6 +43,41 @@ const Index = () => {
             </TabsContent>
           </Tabs>
         );
+      case "reports":
+        return (
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">Reports</h2>
+            <p className="text-muted-foreground">View and analyze detailed reports.</p>
+          </div>
+        );
+      case "projects":
+        return (
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">Projects</h2>
+            <p className="text-muted-foreground">Manage your ongoing projects.</p>
+          </div>
+        );
+      case "support":
+        return (
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">Support</h2>
+            <p className="text-muted-foreground">Get help and support.</p>
+          </div>
+        );
+      case "alerts":
+        return (
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">Alerts</h2>
+            <p className="text-muted-foreground">View system alerts and notifications.</p>
+          </div>
+        );
+      case "settings":
+        return (
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">Settings</h2>
+            <p className="text-muted-foreground">Configure system settings.</p>
+          </div>
+        );
       default:
         return (
           <>
