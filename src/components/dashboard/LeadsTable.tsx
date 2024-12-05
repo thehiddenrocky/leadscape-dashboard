@@ -4,29 +4,38 @@ import { supabase } from "@/lib/supabase";
 import type { Lead } from "@/types/leads";
 
 const fetchLeads = async (): Promise<Lead[]> => {
-  console.log('Fetching leads...');
-  const { data, error } = await supabase
-    .from('leads')
-    .select('*')
-    .order('created_at', { ascending: false });
+  console.log('Starting fetchLeads function...');
+  try {
+    console.log('Making Supabase request...');
+    const { data, error } = await supabase
+      .from('leads')
+      .select('*')
+      .order('created_at', { ascending: false });
 
-  if (error) {
-    console.error('Error fetching leads:', error);
+    if (error) {
+      console.error('Supabase error:', error);
+      throw error;
+    }
+    
+    console.log('Supabase response data:', data);
+    return data || [];
+  } catch (error) {
+    console.error('Error in fetchLeads:', error);
     throw error;
   }
-  console.log('Fetched leads:', data);
-  return data || [];
 };
 
 const LeadsTable = () => {
   const { data: leads, isLoading, error } = useQuery({
     queryKey: ['leads'],
     queryFn: fetchLeads,
+    retry: 1, // Reduce retry attempts for debugging
   });
 
-  console.log('Component state:', { leads, isLoading, error });
+  console.log('LeadsTable render state:', { leads, isLoading, error });
 
   if (isLoading) {
+    console.log('Table is in loading state');
     return (
       <div className="bg-dashboard-card rounded-xl p-6">
         <p className="text-white">Loading leads...</p>
@@ -42,6 +51,8 @@ const LeadsTable = () => {
       </div>
     );
   }
+
+  console.log('Rendering table with leads:', leads);
 
   return (
     <div className="bg-dashboard-card rounded-xl overflow-hidden">
