@@ -48,30 +48,49 @@ const TelecomIndustryTable = () => {
         <Table>
           <TableHeader>
             <TableRow className="bg-gray-900">
-              <TableHead className="text-gray-400">Provider</TableHead>
-              <TableHead className="text-gray-400">Network Reliability</TableHead>
-              <TableHead className="text-gray-400">Download Speed</TableHead>
-              <TableHead className="text-gray-400">Coverage</TableHead>
-              <TableHead className="text-gray-400">Overall Satisfaction</TableHead>
-              <TableHead className="text-gray-400">Focus Area</TableHead>
-              <TableHead className="text-gray-400">Services</TableHead>
+              <TableHead className="text-gray-400 whitespace-normal min-w-[120px]">Provider</TableHead>
+              <TableHead className="text-gray-400 whitespace-normal min-w-[100px]">Network Reliability</TableHead>
+              <TableHead className="text-gray-400 whitespace-normal min-w-[100px]">Download Speed</TableHead>
+              <TableHead className="text-gray-400 whitespace-normal min-w-[200px]">Coverage</TableHead>
+              <TableHead className="text-gray-400 whitespace-normal min-w-[100px]">Overall Satisfaction</TableHead>
+              <TableHead className="text-gray-400 whitespace-normal min-w-[120px]">Focus Area</TableHead>
+              <TableHead className="text-gray-400 whitespace-normal min-w-[120px]">Services</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {metrics?.map((item) => (
               <TableRow key={item.id} className="hover:bg-gray-900/50">
-                <TableCell className="text-white">{item.provider}</TableCell>
-                <TableCell className="text-white">{item.network_reliability}%</TableCell>
-                <TableCell className="text-white">{item.download_speed} Mbps</TableCell>
-                <TableCell className="text-white">{item.coverage_description}</TableCell>
-                <TableCell className="text-white">{item.overall_satisfaction}/5</TableCell>
-                <TableCell className="text-white">{item.focus_area}</TableCell>
-                <TableCell className="text-white">
-                  {[
-                    item.fixed_broadband && 'Fixed Broadband',
-                    item.mobile_broadband && 'Mobile Broadband',
-                    item.bundled_offerings && 'Bundled Offerings'
-                  ].filter(Boolean).join(', ')}
+                <TableCell className="text-white font-medium whitespace-normal min-w-[120px]">
+                  {item.provider}
+                </TableCell>
+                <TableCell className="text-white whitespace-normal min-w-[100px]">
+                  {item.network_reliability}%
+                </TableCell>
+                <TableCell className="text-white whitespace-normal min-w-[100px]">
+                  {item.download_speed} Mbps
+                </TableCell>
+                <TableCell className="text-white whitespace-normal min-w-[200px]">
+                  <div className="space-y-1">
+                    <p>{item.coverage_description}</p>
+                    <div className="text-sm text-gray-400">
+                      <p>Urban: {item.urban_coverage}%</p>
+                      <p>Suburban: {item.suburban_coverage}%</p>
+                      <p>Rural: {item.rural_coverage}%</p>
+                    </div>
+                  </div>
+                </TableCell>
+                <TableCell className="text-white whitespace-normal min-w-[100px]">
+                  {item.overall_satisfaction}/5
+                </TableCell>
+                <TableCell className="text-white whitespace-normal min-w-[120px]">
+                  {item.focus_area}
+                </TableCell>
+                <TableCell className="text-white whitespace-normal min-w-[120px]">
+                  <div className="space-y-1">
+                    {item.fixed_broadband && <p>Fixed Broadband</p>}
+                    {item.mobile_broadband && <p>Mobile Broadband</p>}
+                    {item.bundled_offerings && <p>Bundled Offerings</p>}
+                  </div>
                 </TableCell>
               </TableRow>
             ))}
