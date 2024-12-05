@@ -156,6 +156,33 @@ export type Database = {
         }
         Relationships: []
       }
+      network_performance_metrics: {
+        Row: {
+          average_download_speed: string
+          coverage_description: string
+          created_at: string
+          id: string
+          network_reliability: number
+          provider: string
+        }
+        Insert: {
+          average_download_speed: string
+          coverage_description: string
+          created_at?: string
+          id?: string
+          network_reliability: number
+          provider: string
+        }
+        Update: {
+          average_download_speed?: string
+          coverage_description?: string
+          created_at?: string
+          id?: string
+          network_reliability?: number
+          provider?: string
+        }
+        Relationships: []
+      }
       price_influence_factors: {
         Row: {
           consumer_benefit: string
