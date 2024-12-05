@@ -67,7 +67,7 @@ const LeadsTable = () => {
                 <tr>
                   <th className="px-4 md:px-6 py-3 text-left text-xs md:text-sm text-gray-400">Company</th>
                   <th className="px-4 md:px-6 py-3 text-left text-xs md:text-sm text-gray-400">Contact</th>
-                  <th className="px-4 md:px-6 py-3 text-left text-xs md:text-sm text-gray-400">Services</th>
+                  <th className="px-2 md:px-6 py-3 text-left text-xs md:text-sm text-gray-400">Services</th>
                   <th className="px-4 md:px-6 py-3 text-left text-xs md:text-sm text-gray-400">Locations</th>
                 </tr>
               </thead>
@@ -90,8 +90,8 @@ const LeadsTable = () => {
                         <span className="text-white text-sm md:text-base font-medium">{lead.contact_name}</span>
                       </div>
                     </td>
-                    <td className="px-4 md:px-6 py-3">
-                      <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs md:text-sm font-medium whitespace-nowrap ${
+                    <td className="px-2 md:px-6 py-3">
+                      <span className={`inline-flex items-center px-1.5 md:px-2 py-0.5 rounded-full text-xs md:text-sm font-medium whitespace-nowrap ${
                         lead.relevant_products > 0 
                           ? "bg-dashboard-success/10 text-dashboard-success" 
                           : "bg-gray-800 text-gray-400"
