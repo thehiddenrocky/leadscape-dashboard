@@ -27,19 +27,19 @@ const Index = () => {
       case "reports":
         return (
           <Card className="p-6">
-            <h2 className="text-2xl font-bold mb-4">Reports</h2>
+            <h2 className="text-2xl font-bold mb-4 text-white">Reports</h2>
             <div className="space-y-4">
               <div className="p-4 bg-dashboard-card rounded-lg">
-                <h3 className="font-semibold mb-2">Monthly Performance Report</h3>
-                <p className="text-muted-foreground">Network performance and service quality metrics for the current month.</p>
+                <h3 className="font-semibold mb-2 text-white">Monthly Performance Report</h3>
+                <p className="text-gray-400">Network performance and service quality metrics for the current month.</p>
               </div>
               <div className="p-4 bg-dashboard-card rounded-lg">
-                <h3 className="font-semibold mb-2">Customer Satisfaction Analysis</h3>
-                <p className="text-muted-foreground">Detailed analysis of customer feedback and satisfaction trends.</p>
+                <h3 className="font-semibold mb-2 text-white">Customer Satisfaction Analysis</h3>
+                <p className="text-gray-400">Detailed analysis of customer feedback and satisfaction trends.</p>
               </div>
               <div className="p-4 bg-dashboard-card rounded-lg">
-                <h3 className="font-semibold mb-2">Market Competition Overview</h3>
-                <p className="text-muted-foreground">Comparative analysis of market position and competitor services.</p>
+                <h3 className="font-semibold mb-2 text-white">Market Competition Overview</h3>
+                <p className="text-gray-400">Comparative analysis of market position and competitor services.</p>
               </div>
             </div>
           </Card>
@@ -47,19 +47,19 @@ const Index = () => {
       case "projects":
         return (
           <Card className="p-6">
-            <h2 className="text-2xl font-bold mb-4">Active Projects</h2>
+            <h2 className="text-2xl font-bold mb-4 text-white">Active Projects</h2>
             <div className="space-y-4">
               <div className="p-4 bg-dashboard-card rounded-lg">
-                <h3 className="font-semibold mb-2">Network Expansion - Turku Region</h3>
-                <p className="text-muted-foreground">Fiber network expansion project in Southwest Finland.</p>
+                <h3 className="font-semibold mb-2 text-white">Network Expansion - Turku Region</h3>
+                <p className="text-gray-400">Fiber network expansion project in Southwest Finland.</p>
               </div>
               <div className="p-4 bg-dashboard-card rounded-lg">
-                <h3 className="font-semibold mb-2">5G Infrastructure Update</h3>
-                <p className="text-muted-foreground">Upgrading existing infrastructure to support 5G services.</p>
+                <h3 className="font-semibold mb-2 text-white">5G Infrastructure Update</h3>
+                <p className="text-gray-400">Upgrading existing infrastructure to support 5G services.</p>
               </div>
               <div className="p-4 bg-dashboard-card rounded-lg">
-                <h3 className="font-semibold mb-2">Business Service Enhancement</h3>
-                <p className="text-muted-foreground">Improving service offerings for enterprise customers.</p>
+                <h3 className="font-semibold mb-2 text-white">Business Service Enhancement</h3>
+                <p className="text-gray-400">Improving service offerings for enterprise customers.</p>
               </div>
             </div>
           </Card>
@@ -67,19 +67,19 @@ const Index = () => {
       case "support":
         return (
           <Card className="p-6">
-            <h2 className="text-2xl font-bold mb-4">Support Center</h2>
+            <h2 className="text-2xl font-bold mb-4 text-white">Support Center</h2>
             <div className="space-y-4">
               <div className="p-4 bg-dashboard-card rounded-lg">
-                <h3 className="font-semibold mb-2">Technical Support</h3>
-                <p className="text-muted-foreground">24/7 technical assistance for network and service issues.</p>
+                <h3 className="font-semibold mb-2 text-white">Technical Support</h3>
+                <p className="text-gray-400">24/7 technical assistance for network and service issues.</p>
               </div>
               <div className="p-4 bg-dashboard-card rounded-lg">
-                <h3 className="font-semibold mb-2">Customer Service</h3>
-                <p className="text-muted-foreground">General inquiries and customer support services.</p>
+                <h3 className="font-semibold mb-2 text-white">Customer Service</h3>
+                <p className="text-gray-400">General inquiries and customer support services.</p>
               </div>
               <div className="p-4 bg-dashboard-card rounded-lg">
-                <h3 className="font-semibold mb-2">Documentation</h3>
-                <p className="text-muted-foreground">Access technical documentation and user guides.</p>
+                <h3 className="font-semibold mb-2 text-white">Documentation</h3>
+                <p className="text-gray-400">Access technical documentation and user guides.</p>
               </div>
             </div>
           </Card>
@@ -87,7 +87,7 @@ const Index = () => {
       case "alerts":
         return (
           <Card className="p-6">
-            <h2 className="text-2xl font-bold mb-4">System Alerts</h2>
+            <h2 className="text-2xl font-bold mb-4 text-white">System Alerts</h2>
             <div className="space-y-4">
               <AlertBanner 
                 title="Network Maintenance Scheduled"
@@ -107,19 +107,19 @@ const Index = () => {
       case "settings":
         return (
           <Card className="p-6">
-            <h2 className="text-2xl font-bold mb-4">System Settings</h2>
+            <h2 className="text-2xl font-bold mb-4 text-white">System Settings</h2>
             <div className="space-y-4">
               <div className="p-4 bg-dashboard-card rounded-lg">
-                <h3 className="font-semibold mb-2">User Preferences</h3>
-                <p className="text-muted-foreground">Customize your dashboard experience and notifications.</p>
+                <h3 className="font-semibold mb-2 text-white">User Preferences</h3>
+                <p className="text-gray-400">Customize your dashboard experience and notifications.</p>
               </div>
               <div className="p-4 bg-dashboard-card rounded-lg">
-                <h3 className="font-semibold mb-2">Account Security</h3>
-                <p className="text-muted-foreground">Manage authentication and security settings.</p>
+                <h3 className="font-semibold mb-2 text-white">Account Security</h3>
+                <p className="text-gray-400">Manage authentication and security settings.</p>
               </div>
               <div className="p-4 bg-dashboard-card rounded-lg">
-                <h3 className="font-semibold mb-2">Data Management</h3>
-                <p className="text-muted-foreground">Configure data retention and export options.</p>
+                <h3 className="font-semibold mb-2 text-white">Data Management</h3>
+                <p className="text-gray-400">Configure data retention and export options.</p>
               </div>
             </div>
           </Card>
