@@ -6,6 +6,10 @@ import LeadsTable from "@/components/dashboard/LeadsTable";
 import ServicePricingTable from "@/components/dashboard/ServicePricingTable";
 import MarketAnalysisTable from "@/components/dashboard/MarketAnalysisTable";
 import PriceFactorsTable from "@/components/dashboard/PriceFactorsTable";
+import ServiceQualityTable from "@/components/dashboard/ServiceQualityTable";
+import ConsumerPerceptionsTable from "@/components/dashboard/ConsumerPerceptionsTable";
+import CustomerServiceTable from "@/components/dashboard/CustomerServiceTable";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Index = () => {
   const [activeView, setActiveView] = useState("overview");
@@ -20,6 +24,25 @@ const Index = () => {
         return <PriceFactorsTable />;
       case "leads":
         return <LeadsTable />;
+      case "quality-metrics":
+        return (
+          <Tabs defaultValue="service-quality" className="w-full">
+            <TabsList className="bg-dashboard-card mb-6">
+              <TabsTrigger value="service-quality">Service Quality</TabsTrigger>
+              <TabsTrigger value="consumer-perceptions">Consumer Perceptions</TabsTrigger>
+              <TabsTrigger value="customer-service">Customer Service</TabsTrigger>
+            </TabsList>
+            <TabsContent value="service-quality">
+              <ServiceQualityTable />
+            </TabsContent>
+            <TabsContent value="consumer-perceptions">
+              <ConsumerPerceptionsTable />
+            </TabsContent>
+            <TabsContent value="customer-service">
+              <CustomerServiceTable />
+            </TabsContent>
+          </Tabs>
+        );
       default:
         return (
           <>

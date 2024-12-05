@@ -9,6 +9,75 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      consumer_perceptions: {
+        Row: {
+          category: string
+          created_at: string
+          id: string
+          improvement_areas: string[] | null
+          positive_aspects: string[] | null
+          provider: string
+          satisfaction_score: number | null
+          survey_date: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          id?: string
+          improvement_areas?: string[] | null
+          positive_aspects?: string[] | null
+          provider: string
+          satisfaction_score?: number | null
+          survey_date?: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          id?: string
+          improvement_areas?: string[] | null
+          positive_aspects?: string[] | null
+          provider?: string
+          satisfaction_score?: number | null
+          survey_date?: string
+        }
+        Relationships: []
+      }
+      customer_service_metrics: {
+        Row: {
+          avg_wait_time_minutes: number | null
+          common_issues: string[] | null
+          created_at: string
+          id: string
+          provider: string
+          report_date: string
+          resolution_time_hours: number | null
+          satisfaction_score: number | null
+          support_channels: string[] | null
+        }
+        Insert: {
+          avg_wait_time_minutes?: number | null
+          common_issues?: string[] | null
+          created_at?: string
+          id?: string
+          provider: string
+          report_date?: string
+          resolution_time_hours?: number | null
+          satisfaction_score?: number | null
+          support_channels?: string[] | null
+        }
+        Update: {
+          avg_wait_time_minutes?: number | null
+          common_issues?: string[] | null
+          created_at?: string
+          id?: string
+          provider?: string
+          report_date?: string
+          resolution_time_hours?: number | null
+          satisfaction_score?: number | null
+          support_channels?: string[] | null
+        }
+        Relationships: []
+      }
       leads: {
         Row: {
           company_logo: string
@@ -177,6 +246,51 @@ export type Database = {
           speed_mbps?: number | null
           target_market?: string
           technology?: string
+        }
+        Relationships: []
+      }
+      service_quality_metrics: {
+        Row: {
+          connection_stability_percent: number | null
+          created_at: string
+          download_speed_mbps: number | null
+          id: string
+          infrastructure_type: string | null
+          latency_ms: number | null
+          location_type: string | null
+          measurement_date: string
+          measurement_tool: string | null
+          network_coverage_percent: number | null
+          provider: string
+          upload_speed_mbps: number | null
+        }
+        Insert: {
+          connection_stability_percent?: number | null
+          created_at?: string
+          download_speed_mbps?: number | null
+          id?: string
+          infrastructure_type?: string | null
+          latency_ms?: number | null
+          location_type?: string | null
+          measurement_date?: string
+          measurement_tool?: string | null
+          network_coverage_percent?: number | null
+          provider: string
+          upload_speed_mbps?: number | null
+        }
+        Update: {
+          connection_stability_percent?: number | null
+          created_at?: string
+          download_speed_mbps?: number | null
+          id?: string
+          infrastructure_type?: string | null
+          latency_ms?: number | null
+          location_type?: string | null
+          measurement_date?: string
+          measurement_tool?: string | null
+          network_coverage_percent?: number | null
+          provider?: string
+          upload_speed_mbps?: number | null
         }
         Relationships: []
       }

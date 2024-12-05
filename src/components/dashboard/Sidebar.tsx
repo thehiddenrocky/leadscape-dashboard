@@ -1,4 +1,4 @@
-import { Home, Users, Bell, Settings, LineChart, DollarSign, TrendingUp, X } from "lucide-react";
+import { Home, Users, Bell, Settings, LineChart, DollarSign, TrendingUp, BarChart2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface SidebarProps {
@@ -64,6 +64,12 @@ const Sidebar = ({ onClose, onNavigate, activeView }: SidebarProps) => {
           label="Price Factors" 
           active={activeView === "price-factors"}
           onClick={() => handleNavigation("price-factors")}
+        />
+        <SidebarItem 
+          icon={<BarChart2 size={20} />} 
+          label="Quality Metrics" 
+          active={activeView === "quality-metrics"}
+          onClick={() => handleNavigation("quality-metrics")}
         />
         <SidebarItem 
           icon={<Bell size={20} />} 
