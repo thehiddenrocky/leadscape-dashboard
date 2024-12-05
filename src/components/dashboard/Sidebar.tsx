@@ -1,4 +1,4 @@
-import { Home, Users, Bell, Settings, LineChart, DollarSign, TrendingUp, BarChart2 } from "lucide-react";
+import { Home, Users, Bell, Settings, LineChart, DollarSign, TrendingUp, BarChart2, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface SidebarProps {
@@ -26,7 +26,7 @@ const Sidebar = ({ onClose, onNavigate, activeView }: SidebarProps) => {
         className="absolute top-4 right-4 md:hidden"
         onClick={onClose}
       >
-        <X className="h-4 w-4 text-white" />
+        <Menu className="h-4 w-4 text-white" />
       </Button>
 
       <div className="flex items-center gap-2 mb-8 mt-2">
