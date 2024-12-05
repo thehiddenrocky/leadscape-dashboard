@@ -4,12 +4,17 @@ import { supabase } from "@/lib/supabase";
 import type { Lead } from "@/types/leads";
 
 const fetchLeads = async (): Promise<Lead[]> => {
+  console.log('Fetching leads...');
   const { data, error } = await supabase
     .from('leads')
     .select('*')
     .order('created_at', { ascending: false });
 
-  if (error) throw error;
+  if (error) {
+    console.error('Error fetching leads:', error);
+    throw error;
+  }
+  console.log('Fetched leads:', data);
   return data || [];
 };
 
@@ -18,6 +23,8 @@ const LeadsTable = () => {
     queryKey: ['leads'],
     queryFn: fetchLeads,
   });
+
+  console.log('Component state:', { leads, isLoading, error });
 
   if (isLoading) {
     return (
@@ -28,6 +35,7 @@ const LeadsTable = () => {
   }
 
   if (error) {
+    console.error('Error in component:', error);
     return (
       <div className="bg-dashboard-card rounded-xl p-6">
         <p className="text-red-500">Error loading leads</p>
