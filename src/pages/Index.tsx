@@ -11,6 +11,7 @@ import NetworkPerformanceTable from "@/components/dashboard/NetworkPerformanceTa
 import CustomerServiceTable from "@/components/dashboard/CustomerServiceTable";
 import TelecomIndustryTable from "@/components/dashboard/TelecomIndustryTable";
 import CommonIssuesTable from "@/components/dashboard/CommonIssuesTable";
+import CustomerFeedbackLouneaTable from "@/components/dashboard/CustomerFeedbackLouneaTable";
 import { Card } from "@/components/ui/card";
 
 const Index = () => {
@@ -36,6 +37,8 @@ const Index = () => {
         return <TelecomIndustryTable />;
       case "common-issues":
         return <CommonIssuesTable />;
+      case "lounea-feedback":
+        return <CustomerFeedbackLouneaTable />;
       case "alerts":
         return (
           <Card className="p-6">

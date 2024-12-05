@@ -42,6 +42,36 @@ export type Database = {
         }
         Relationships: []
       }
+      customer_feedback_lounea: {
+        Row: {
+          additional_details: string | null
+          category: string
+          created_at: string
+          id: string
+          key_point: string
+          reference_links: string | null
+          subcategory: string
+        }
+        Insert: {
+          additional_details?: string | null
+          category: string
+          created_at?: string
+          id?: string
+          key_point: string
+          reference_links?: string | null
+          subcategory: string
+        }
+        Update: {
+          additional_details?: string | null
+          category?: string
+          created_at?: string
+          id?: string
+          key_point?: string
+          reference_links?: string | null
+          subcategory?: string
+        }
+        Relationships: []
+      }
       customer_service_metrics: {
         Row: {
           avg_wait_time_minutes: number | null
