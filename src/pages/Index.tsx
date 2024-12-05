@@ -7,9 +7,7 @@ import ServicePricingTable from "@/components/dashboard/ServicePricingTable";
 import MarketAnalysisTable from "@/components/dashboard/MarketAnalysisTable";
 import PriceFactorsTable from "@/components/dashboard/PriceFactorsTable";
 import ServiceQualityTable from "@/components/dashboard/ServiceQualityTable";
-import ConsumerPerceptionsTable from "@/components/dashboard/ConsumerPerceptionsTable";
-import CustomerServiceTable from "@/components/dashboard/CustomerServiceTable";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card } from "@/components/ui/card";
 
 const Index = () => {
   const [activeView, setActiveView] = useState("overview");
@@ -25,58 +23,106 @@ const Index = () => {
       case "leads":
         return <LeadsTable />;
       case "quality-metrics":
-        return (
-          <Tabs defaultValue="service-quality" className="w-full">
-            <TabsList className="bg-dashboard-card mb-6">
-              <TabsTrigger value="service-quality">Service Quality</TabsTrigger>
-              <TabsTrigger value="consumer-perceptions">Consumer Perceptions</TabsTrigger>
-              <TabsTrigger value="customer-service">Customer Service</TabsTrigger>
-            </TabsList>
-            <TabsContent value="service-quality">
-              <ServiceQualityTable />
-            </TabsContent>
-            <TabsContent value="consumer-perceptions">
-              <ConsumerPerceptionsTable />
-            </TabsContent>
-            <TabsContent value="customer-service">
-              <CustomerServiceTable />
-            </TabsContent>
-          </Tabs>
-        );
+        return <ServiceQualityTable />;
       case "reports":
         return (
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Reports</h2>
-            <p className="text-muted-foreground">View and analyze detailed reports.</p>
-          </div>
+          <Card className="p-6">
+            <h2 className="text-2xl font-bold mb-4">Reports</h2>
+            <div className="space-y-4">
+              <div className="p-4 bg-dashboard-card rounded-lg">
+                <h3 className="font-semibold mb-2">Monthly Performance Report</h3>
+                <p className="text-muted-foreground">Network performance and service quality metrics for the current month.</p>
+              </div>
+              <div className="p-4 bg-dashboard-card rounded-lg">
+                <h3 className="font-semibold mb-2">Customer Satisfaction Analysis</h3>
+                <p className="text-muted-foreground">Detailed analysis of customer feedback and satisfaction trends.</p>
+              </div>
+              <div className="p-4 bg-dashboard-card rounded-lg">
+                <h3 className="font-semibold mb-2">Market Competition Overview</h3>
+                <p className="text-muted-foreground">Comparative analysis of market position and competitor services.</p>
+              </div>
+            </div>
+          </Card>
         );
       case "projects":
         return (
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Projects</h2>
-            <p className="text-muted-foreground">Manage your ongoing projects.</p>
-          </div>
+          <Card className="p-6">
+            <h2 className="text-2xl font-bold mb-4">Active Projects</h2>
+            <div className="space-y-4">
+              <div className="p-4 bg-dashboard-card rounded-lg">
+                <h3 className="font-semibold mb-2">Network Expansion - Turku Region</h3>
+                <p className="text-muted-foreground">Fiber network expansion project in Southwest Finland.</p>
+              </div>
+              <div className="p-4 bg-dashboard-card rounded-lg">
+                <h3 className="font-semibold mb-2">5G Infrastructure Update</h3>
+                <p className="text-muted-foreground">Upgrading existing infrastructure to support 5G services.</p>
+              </div>
+              <div className="p-4 bg-dashboard-card rounded-lg">
+                <h3 className="font-semibold mb-2">Business Service Enhancement</h3>
+                <p className="text-muted-foreground">Improving service offerings for enterprise customers.</p>
+              </div>
+            </div>
+          </Card>
         );
       case "support":
         return (
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Support</h2>
-            <p className="text-muted-foreground">Get help and support.</p>
-          </div>
+          <Card className="p-6">
+            <h2 className="text-2xl font-bold mb-4">Support Center</h2>
+            <div className="space-y-4">
+              <div className="p-4 bg-dashboard-card rounded-lg">
+                <h3 className="font-semibold mb-2">Technical Support</h3>
+                <p className="text-muted-foreground">24/7 technical assistance for network and service issues.</p>
+              </div>
+              <div className="p-4 bg-dashboard-card rounded-lg">
+                <h3 className="font-semibold mb-2">Customer Service</h3>
+                <p className="text-muted-foreground">General inquiries and customer support services.</p>
+              </div>
+              <div className="p-4 bg-dashboard-card rounded-lg">
+                <h3 className="font-semibold mb-2">Documentation</h3>
+                <p className="text-muted-foreground">Access technical documentation and user guides.</p>
+              </div>
+            </div>
+          </Card>
         );
       case "alerts":
         return (
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Alerts</h2>
-            <p className="text-muted-foreground">View system alerts and notifications.</p>
-          </div>
+          <Card className="p-6">
+            <h2 className="text-2xl font-bold mb-4">System Alerts</h2>
+            <div className="space-y-4">
+              <AlertBanner 
+                title="Network Maintenance Scheduled"
+                message="Routine maintenance planned for next week in Helsinki region"
+              />
+              <AlertBanner 
+                title="New Service Area"
+                message="Network coverage expanded in Tampere industrial district"
+              />
+              <AlertBanner 
+                title="System Update"
+                message="Platform updates scheduled for implementation this weekend"
+              />
+            </div>
+          </Card>
         );
       case "settings":
         return (
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Settings</h2>
-            <p className="text-muted-foreground">Configure system settings.</p>
-          </div>
+          <Card className="p-6">
+            <h2 className="text-2xl font-bold mb-4">System Settings</h2>
+            <div className="space-y-4">
+              <div className="p-4 bg-dashboard-card rounded-lg">
+                <h3 className="font-semibold mb-2">User Preferences</h3>
+                <p className="text-muted-foreground">Customize your dashboard experience and notifications.</p>
+              </div>
+              <div className="p-4 bg-dashboard-card rounded-lg">
+                <h3 className="font-semibold mb-2">Account Security</h3>
+                <p className="text-muted-foreground">Manage authentication and security settings.</p>
+              </div>
+              <div className="p-4 bg-dashboard-card rounded-lg">
+                <h3 className="font-semibold mb-2">Data Management</h3>
+                <p className="text-muted-foreground">Configure data retention and export options.</p>
+              </div>
+            </div>
+          </Card>
         );
       default:
         return (
