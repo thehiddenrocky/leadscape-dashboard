@@ -91,14 +91,12 @@ const LeadsTable = () => {
                       </div>
                     </td>
                     <td className="px-4 md:px-6 py-3">
-                      <span className={`inline-flex px-2.5 py-1 rounded-full text-xs md:text-sm font-medium ${
+                      <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs md:text-sm font-medium whitespace-nowrap ${
                         lead.relevant_products > 0 
                           ? "bg-dashboard-success/10 text-dashboard-success" 
                           : "bg-gray-800 text-gray-400"
                       }`}>
-                        {lead.relevant_products > 0 
-                          ? `${lead.relevant_products} Services` 
-                          : "No Services"}
+                        {lead.relevant_products} Services
                       </span>
                     </td>
                     <td className="px-4 md:px-6 py-3">
