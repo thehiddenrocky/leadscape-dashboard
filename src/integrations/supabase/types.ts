@@ -78,6 +78,33 @@ export type Database = {
         }
         Relationships: []
       }
+      comparative_analysis: {
+        Row: {
+          company: string
+          created_at: string
+          id: string
+          strengths: string
+          visibility_reach: string
+          weaknesses: string
+        }
+        Insert: {
+          company: string
+          created_at?: string
+          id?: string
+          strengths: string
+          visibility_reach: string
+          weaknesses: string
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          id?: string
+          strengths?: string
+          visibility_reach?: string
+          weaknesses?: string
+        }
+        Relationships: []
+      }
       consumer_perceptions: {
         Row: {
           category: string
@@ -108,6 +135,36 @@ export type Database = {
           provider?: string
           satisfaction_score?: number | null
           survey_date?: string
+        }
+        Relationships: []
+      }
+      creative_highlights: {
+        Row: {
+          company: string
+          created_at: string
+          creative_focus: string
+          id: string
+          media_coverage: string
+          pr_event: string
+          target_audience: string
+        }
+        Insert: {
+          company: string
+          created_at?: string
+          creative_focus: string
+          id?: string
+          media_coverage: string
+          pr_event: string
+          target_audience: string
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          creative_focus?: string
+          id?: string
+          media_coverage?: string
+          pr_event?: string
+          target_audience?: string
         }
         Relationships: []
       }
@@ -174,6 +231,27 @@ export type Database = {
           resolution_time_hours?: number | null
           satisfaction_score?: number | null
           support_channels?: string[] | null
+        }
+        Relationships: []
+      }
+      emerging_trends: {
+        Row: {
+          created_at: string
+          description: string
+          id: string
+          trend: string
+        }
+        Insert: {
+          created_at?: string
+          description: string
+          id?: string
+          trend: string
+        }
+        Update: {
+          created_at?: string
+          description?: string
+          id?: string
+          trend?: string
         }
         Relationships: []
       }
@@ -252,6 +330,36 @@ export type Database = {
           market_effect?: string
           time_period?: string
           trend?: string
+        }
+        Relationships: []
+      }
+      marketing_campaigns: {
+        Row: {
+          campaign_focus: string
+          company: string
+          created_at: string
+          id: string
+          launch_date: string
+          messaging: string
+          status: string
+        }
+        Insert: {
+          campaign_focus: string
+          company: string
+          created_at?: string
+          id?: string
+          launch_date: string
+          messaging: string
+          status: string
+        }
+        Update: {
+          campaign_focus?: string
+          company?: string
+          created_at?: string
+          id?: string
+          launch_date?: string
+          messaging?: string
+          status?: string
         }
         Relationships: []
       }
