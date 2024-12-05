@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { supabase } from "@/integrations/supabase/client";
+import "./telecom-table.css";
 
 const fetchTelecomIndustry = async () => {
   console.log('Fetching telecom industry data...');
@@ -45,24 +46,6 @@ const TelecomIndustryTable = () => {
         <h2 className="text-white text-xl font-semibold mb-4">Telecom Industry Analysis</h2>
       </div>
       <div className="overflow-x-auto scrollbar-container">
-        <style jsx>{`
-          .scrollbar-container::-webkit-scrollbar {
-            height: 12px;
-            background-color: #2d2d2d;
-          }
-          .scrollbar-container::-webkit-scrollbar-thumb {
-            background-color: #FF69B4;
-            border-radius: 6px;
-            border: 2px solid #2d2d2d;
-          }
-          .scrollbar-container::-webkit-scrollbar-thumb:hover {
-            background-color: #ff4da6;
-          }
-          .scrollbar-container::-webkit-scrollbar-track {
-            background-color: #2d2d2d;
-            border-radius: 6px;
-          }
-        `}</style>
         <Table>
           <TableHeader>
             <TableRow className="bg-gray-900">
