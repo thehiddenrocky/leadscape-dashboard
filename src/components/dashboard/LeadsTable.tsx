@@ -18,36 +18,49 @@ const mockLeads: Lead[] = [
   {
     id: "1",
     company: {
-      name: "Adobe",
+      name: "Salo IoT Campus",
       logo: "/placeholder.svg",
     },
     contact: {
-      name: "Savannah Nguyen",
+      name: "Matti Virtanen",
       avatar: "/placeholder.svg",
     },
-    relevantProducts: 3,
-    instances: 4,
+    relevantProducts: 4,
+    instances: 6,
   },
   {
     id: "2",
     company: {
-      name: "Google",
+      name: "Forssa Business Park",
       logo: "/placeholder.svg",
     },
     contact: {
-      name: "Bessie Cooper",
+      name: "Laura Korhonen",
       avatar: "/placeholder.svg",
     },
-    relevantProducts: 0,
-    instances: 2,
+    relevantProducts: 2,
+    instances: 3,
   },
+  {
+    id: "3",
+    company: {
+      name: "Hämeenlinna Tech Hub",
+      logo: "/placeholder.svg",
+    },
+    contact: {
+      name: "Mikko Järvinen",
+      avatar: "/placeholder.svg",
+    },
+    relevantProducts: 3,
+    instances: 5,
+  }
 ];
 
 const LeadsTable = () => {
   return (
     <div className="bg-dashboard-card rounded-xl overflow-hidden">
       <div className="p-4 md:p-6">
-        <h2 className="text-white text-lg md:text-xl font-semibold">Recent Leads</h2>
+        <h2 className="text-white text-lg md:text-xl font-semibold">Recent Business Leads</h2>
       </div>
       <div className="overflow-x-auto">
         <div className="min-w-full inline-block align-middle">
@@ -56,9 +69,9 @@ const LeadsTable = () => {
               <thead className="bg-gray-900">
                 <tr>
                   <th className="px-4 md:px-6 py-3 text-left text-xs md:text-sm text-gray-400">Company</th>
-                  <th className="px-4 md:px-6 py-3 text-left text-xs md:text-sm text-gray-400">Lead</th>
-                  <th className="px-4 md:px-6 py-3 text-left text-xs md:text-sm text-gray-400">Products</th>
-                  <th className="px-4 md:px-6 py-3 text-left text-xs md:text-sm text-gray-400">Instances</th>
+                  <th className="px-4 md:px-6 py-3 text-left text-xs md:text-sm text-gray-400">Contact</th>
+                  <th className="px-4 md:px-6 py-3 text-left text-xs md:text-sm text-gray-400">Services</th>
+                  <th className="px-4 md:px-6 py-3 text-left text-xs md:text-sm text-gray-400">Locations</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-800">
@@ -87,12 +100,12 @@ const LeadsTable = () => {
                           : "bg-gray-800 text-gray-400"
                       }`}>
                         {lead.relevantProducts > 0 
-                          ? `${lead.relevantProducts} Relevant` 
-                          : "No Target Products"}
+                          ? `${lead.relevantProducts} Services` 
+                          : "No Services"}
                       </span>
                     </td>
                     <td className="px-4 md:px-6 py-3">
-                      <span className="text-white text-sm md:text-base">{lead.instances} Instances</span>
+                      <span className="text-white text-sm md:text-base">{lead.instances} Locations</span>
                     </td>
                   </tr>
                 ))}

@@ -7,22 +7,22 @@ const Index = () => {
   return (
     <Layout>
       <AlertBanner 
-        title="Alert: 5 New B2C fintech companies are investing in decentralized cloud solutions"
-        message="New opportunities detected in your target market"
+        title="Alert: 3 New Business Opportunities in Forssa Region"
+        message="Increased fiber connectivity demand detected in Southwest Finland"
       />
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <StatsCard
-          title="Activity Increase"
-          value="36%"
-          trend={36}
-          description="Increase in Relevant Activity Compared To Last Week"
+          title="Network Coverage Growth"
+          value="42%"
+          trend={12}
+          description="Fiber Network Coverage Increase in Service Areas"
         />
         <StatsCard
-          title="Active Accounts"
-          value="14%"
-          trend={-2}
-          description="16 Of Your 108 Accounts Had Relevant Activity This Week"
+          title="Service Adoption"
+          value="28%"
+          trend={8}
+          description="New Business Fiber Service Subscriptions This Quarter"
         />
       </div>
 
