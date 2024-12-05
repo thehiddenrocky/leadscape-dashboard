@@ -18,6 +18,8 @@ const Index = () => {
         return <MarketAnalysisTable />;
       case "price-factors":
         return <PriceFactorsTable />;
+      case "leads":
+        return <LeadsTable />;
       default:
         return (
           <>
@@ -48,7 +50,7 @@ const Index = () => {
   };
 
   return (
-    <Layout>
+    <Layout activeView={activeView} onNavigate={setActiveView}>
       {renderContent()}
     </Layout>
   );

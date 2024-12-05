@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button";
 
 interface LayoutProps {
   children: ReactNode;
+  activeView: string;
+  onNavigate: (view: string) => void;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, activeView, onNavigate }: LayoutProps) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
@@ -29,7 +31,11 @@ const Layout = ({ children }: LayoutProps) => {
         } fixed inset-0 z-40 md:relative md:translate-x-0 transition-transform duration-300 ease-in-out`}
       >
         <div className="h-full">
-          <Sidebar onClose={() => setIsSidebarOpen(false)} />
+          <Sidebar 
+            onClose={() => setIsSidebarOpen(false)} 
+            activeView={activeView}
+            onNavigate={onNavigate}
+          />
         </div>
       </div>
 
