@@ -103,9 +103,10 @@ const LeadsTable = () => {
                     </td>
                     <td className="px-4 md:px-6 py-3">
                       <div className="flex flex-col">
-                        <span className="text-white text-sm md:text-base font-medium">
-                          {lead.instances} {lead.instances === 1 ? 'Location' : 'Locations'}
-                        </span>
+                        <div className="flex items-baseline gap-1">
+                          <span className="text-white text-sm md:text-base font-medium">{lead.instances}</span>
+                          <span className="text-white text-sm md:text-base">Locations</span>
+                        </div>
                         <span className="text-gray-400 text-xs">Active Sites</span>
                       </div>
                     </td>
