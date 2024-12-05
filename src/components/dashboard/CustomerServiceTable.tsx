@@ -50,10 +50,8 @@ const CustomerServiceTable = () => {
             <TableRow className="bg-gray-900">
               <TableHead className="text-gray-400">Provider</TableHead>
               <TableHead className="text-gray-400">Avg Wait Time (min)</TableHead>
-              <TableHead className="text-gray-400">Resolution Time (hrs)</TableHead>
               <TableHead className="text-gray-400">Support Channels</TableHead>
               <TableHead className="text-gray-400">Common Issues</TableHead>
-              <TableHead className="text-gray-400">Satisfaction Score</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -61,10 +59,8 @@ const CustomerServiceTable = () => {
               <TableRow key={item.id} className="hover:bg-gray-900/50">
                 <TableCell className="text-white">{item.provider}</TableCell>
                 <TableCell className="text-white">{item.avg_wait_time_minutes}</TableCell>
-                <TableCell className="text-white">{item.resolution_time_hours}</TableCell>
                 <TableCell className="text-white">{item.support_channels?.join(', ')}</TableCell>
                 <TableCell className="text-white">{item.common_issues?.join(', ')}</TableCell>
-                <TableCell className="text-white">{item.satisfaction_score}/10</TableCell>
               </TableRow>
             ))}
           </TableBody>

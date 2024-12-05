@@ -1,4 +1,4 @@
-import { Home, Users, Bell, LineChart, DollarSign, TrendingUp, BarChart2, Network, Menu } from "lucide-react";
+import { Home, Users, Bell, LineChart, DollarSign, TrendingUp, BarChart2, Network, Menu, HeadphonesIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface SidebarProps {
@@ -76,6 +76,12 @@ const Sidebar = ({ onClose, onNavigate, activeView }: SidebarProps) => {
           label="Network Performance" 
           active={activeView === "network-performance"}
           onClick={() => handleNavigation("network-performance")}
+        />
+        <SidebarItem 
+          icon={<HeadphonesIcon size={20} />} 
+          label="Customer Service" 
+          active={activeView === "customer-service"}
+          onClick={() => handleNavigation("customer-service")}
         />
         <SidebarItem 
           icon={<Bell size={20} />} 

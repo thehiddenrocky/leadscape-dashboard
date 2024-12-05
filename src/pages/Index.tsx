@@ -8,6 +8,7 @@ import MarketAnalysisTable from "@/components/dashboard/MarketAnalysisTable";
 import PriceFactorsTable from "@/components/dashboard/PriceFactorsTable";
 import ServiceQualityTable from "@/components/dashboard/ServiceQualityTable";
 import NetworkPerformanceTable from "@/components/dashboard/NetworkPerformanceTable";
+import CustomerServiceTable from "@/components/dashboard/CustomerServiceTable";
 import { Card } from "@/components/ui/card";
 
 const Index = () => {
@@ -27,6 +28,8 @@ const Index = () => {
         return <ServiceQualityTable />;
       case "network-performance":
         return <NetworkPerformanceTable />;
+      case "customer-service":
+        return <CustomerServiceTable />;
       case "alerts":
         return (
           <Card className="p-6">
