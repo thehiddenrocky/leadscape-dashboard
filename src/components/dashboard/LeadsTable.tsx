@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Avatar } from "@/components/ui/avatar";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@/integrations/supabase/client";
 import type { Lead } from "@/types/leads";
 
 const fetchLeads = async (): Promise<Lead[]> => {
