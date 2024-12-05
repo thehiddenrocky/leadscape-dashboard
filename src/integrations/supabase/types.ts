@@ -42,6 +42,144 @@ export type Database = {
         }
         Relationships: []
       }
+      market_analysis: {
+        Row: {
+          affected_segment: string
+          category: string
+          created_at: string
+          current_status: string
+          data_date: string
+          factor: string
+          geographic_scope: string
+          id: string
+          impact_level: string
+          market_effect: string
+          time_period: string
+          trend: string
+        }
+        Insert: {
+          affected_segment: string
+          category: string
+          created_at?: string
+          current_status: string
+          data_date: string
+          factor: string
+          geographic_scope: string
+          id?: string
+          impact_level: string
+          market_effect: string
+          time_period: string
+          trend: string
+        }
+        Update: {
+          affected_segment?: string
+          category?: string
+          created_at?: string
+          current_status?: string
+          data_date?: string
+          factor?: string
+          geographic_scope?: string
+          id?: string
+          impact_level?: string
+          market_effect?: string
+          time_period?: string
+          trend?: string
+        }
+        Relationships: []
+      }
+      price_influence_factors: {
+        Row: {
+          consumer_benefit: string
+          created_at: string
+          data_date: string
+          factor: string
+          factor_type: string
+          id: string
+          primary_impact: string
+          provider_response: string
+          rural_effect: string
+          secondary_impact: string
+          time_frame: string
+          urban_effect: string
+        }
+        Insert: {
+          consumer_benefit: string
+          created_at?: string
+          data_date: string
+          factor: string
+          factor_type: string
+          id?: string
+          primary_impact: string
+          provider_response: string
+          rural_effect: string
+          secondary_impact: string
+          time_frame: string
+          urban_effect: string
+        }
+        Update: {
+          consumer_benefit?: string
+          created_at?: string
+          data_date?: string
+          factor?: string
+          factor_type?: string
+          id?: string
+          primary_impact?: string
+          provider_response?: string
+          rural_effect?: string
+          secondary_impact?: string
+          time_frame?: string
+          urban_effect?: string
+        }
+        Relationships: []
+      }
+      service_pricing: {
+        Row: {
+          created_at: string
+          data_date: string
+          entertainment_package: string | null
+          hardware_model: string | null
+          id: string
+          location_type: string
+          monthly_price_eur: number
+          package_type: string
+          provider: string
+          service_type: string
+          speed_mbps: number | null
+          target_market: string
+          technology: string
+        }
+        Insert: {
+          created_at?: string
+          data_date: string
+          entertainment_package?: string | null
+          hardware_model?: string | null
+          id?: string
+          location_type: string
+          monthly_price_eur: number
+          package_type: string
+          provider: string
+          service_type: string
+          speed_mbps?: number | null
+          target_market: string
+          technology: string
+        }
+        Update: {
+          created_at?: string
+          data_date?: string
+          entertainment_package?: string | null
+          hardware_model?: string | null
+          id?: string
+          location_type?: string
+          monthly_price_eur?: number
+          package_type?: string
+          provider?: string
+          service_type?: string
+          speed_mbps?: number | null
+          target_market?: string
+          technology?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

@@ -1,4 +1,4 @@
-import { Home, Users, Bell, Settings, X } from "lucide-react";
+import { Home, Users, Bell, Settings, LineChart, DollarSign, TrendingUp, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface SidebarProps {
@@ -26,6 +26,9 @@ const Sidebar = ({ onClose }: SidebarProps) => {
       <nav className="space-y-2">
         <SidebarItem icon={<Home size={20} />} label="Overview" active />
         <SidebarItem icon={<Users size={20} />} label="Leads" />
+        <SidebarItem icon={<DollarSign size={20} />} label="Service Pricing" />
+        <SidebarItem icon={<LineChart size={20} />} label="Market Analysis" />
+        <SidebarItem icon={<TrendingUp size={20} />} label="Price Factors" />
         <SidebarItem icon={<Bell size={20} />} label="Alerts" />
         <SidebarItem icon={<Settings size={20} />} label="Settings" />
       </nav>
