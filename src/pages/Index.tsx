@@ -12,6 +12,7 @@ import CustomerServiceTable from "@/components/dashboard/CustomerServiceTable";
 import TelecomIndustryTable from "@/components/dashboard/TelecomIndustryTable";
 import CommonIssuesTable from "@/components/dashboard/CommonIssuesTable";
 import CustomerFeedbackLouneaTable from "@/components/dashboard/CustomerFeedbackLouneaTable";
+import ComprehensivePricingView from "@/components/dashboard/ComprehensivePricingView";
 import { Card } from "@/components/ui/card";
 
 const Index = () => {
@@ -20,7 +21,7 @@ const Index = () => {
   const renderContent = () => {
     switch (activeView) {
       case "service-pricing":
-        return <ServicePricingTable />;
+        return <ComprehensivePricingView />;
       case "market-analysis":
         return <MarketAnalysisTable />;
       case "price-factors":

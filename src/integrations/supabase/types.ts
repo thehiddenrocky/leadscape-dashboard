@@ -9,6 +9,75 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      broadband_packages: {
+        Row: {
+          additional_fees: string | null
+          contract_length: string | null
+          created_at: string
+          data_cap: string | null
+          download_speed: string
+          id: string
+          monthly_price: number
+          plan_name: string
+          provider: string
+          technology: string
+          upload_speed: string | null
+        }
+        Insert: {
+          additional_fees?: string | null
+          contract_length?: string | null
+          created_at?: string
+          data_cap?: string | null
+          download_speed: string
+          id?: string
+          monthly_price: number
+          plan_name: string
+          provider: string
+          technology: string
+          upload_speed?: string | null
+        }
+        Update: {
+          additional_fees?: string | null
+          contract_length?: string | null
+          created_at?: string
+          data_cap?: string | null
+          download_speed?: string
+          id?: string
+          monthly_price?: number
+          plan_name?: string
+          provider?: string
+          technology?: string
+          upload_speed?: string | null
+        }
+        Relationships: []
+      }
+      bundled_offers: {
+        Row: {
+          bundle_components: string[]
+          created_at: string
+          id: string
+          notes: string | null
+          provider: string
+          total_price: number | null
+        }
+        Insert: {
+          bundle_components: string[]
+          created_at?: string
+          id?: string
+          notes?: string | null
+          provider: string
+          total_price?: number | null
+        }
+        Update: {
+          bundle_components?: string[]
+          created_at?: string
+          id?: string
+          notes?: string | null
+          provider?: string
+          total_price?: number | null
+        }
+        Relationships: []
+      }
       consumer_perceptions: {
         Row: {
           category: string
@@ -183,6 +252,39 @@ export type Database = {
           market_effect?: string
           time_period?: string
           trend?: string
+        }
+        Relationships: []
+      }
+      mobile_plans: {
+        Row: {
+          calls_texts: string | null
+          contract_terms: string | null
+          created_at: string
+          data_allowance: string
+          id: string
+          monthly_price: number
+          plan_name: string
+          provider: string
+        }
+        Insert: {
+          calls_texts?: string | null
+          contract_terms?: string | null
+          created_at?: string
+          data_allowance: string
+          id?: string
+          monthly_price: number
+          plan_name: string
+          provider: string
+        }
+        Update: {
+          calls_texts?: string | null
+          contract_terms?: string | null
+          created_at?: string
+          data_allowance?: string
+          id?: string
+          monthly_price?: number
+          plan_name?: string
+          provider?: string
         }
         Relationships: []
       }
