@@ -13,6 +13,7 @@ import TelecomIndustryTable from "@/components/dashboard/TelecomIndustryTable";
 import CommonIssuesTable from "@/components/dashboard/CommonIssuesTable";
 import CustomerFeedbackLouneaTable from "@/components/dashboard/CustomerFeedbackLouneaTable";
 import ComprehensivePricingView from "@/components/dashboard/ComprehensivePricingView";
+import ImprovementAreasView from "@/components/dashboard/ImprovementAreasView";
 import { Card } from "@/components/ui/card";
 
 const Index = () => {
@@ -40,6 +41,8 @@ const Index = () => {
         return <CommonIssuesTable />;
       case "lounea-feedback":
         return <CustomerFeedbackLouneaTable />;
+      case "improvement-areas":
+        return <ImprovementAreasView />;
       case "alerts":
         return (
           <Card className="p-6">

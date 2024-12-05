@@ -1,4 +1,4 @@
-import { Home, Users, Bell, LineChart, DollarSign, TrendingUp, BarChart2, Network, Menu, HeadphonesIcon, BarChart, AlertTriangle, MessageSquare } from "lucide-react";
+import { Home, Users, Bell, LineChart, DollarSign, TrendingUp, BarChart2, Network, Menu, HeadphonesIcon, BarChart, AlertTriangle, MessageSquare, ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface SidebarProps {
@@ -19,7 +19,6 @@ const Sidebar = ({ onClose, onNavigate, activeView }: SidebarProps) => {
 
   return (
     <div className="w-64 h-full bg-dashboard-card border-r border-gray-800 p-6 flex flex-col relative">
-      {/* Close button for mobile */}
       <Button
         variant="ghost"
         size="icon"
@@ -94,6 +93,12 @@ const Sidebar = ({ onClose, onNavigate, activeView }: SidebarProps) => {
           label="Lounea Feedback" 
           active={activeView === "lounea-feedback"}
           onClick={() => handleNavigation("lounea-feedback")}
+        />
+        <SidebarItem 
+          icon={<ClipboardList size={20} />} 
+          label="Improvement Areas" 
+          active={activeView === "improvement-areas"}
+          onClick={() => handleNavigation("improvement-areas")}
         />
         <SidebarItem 
           icon={<AlertTriangle size={20} />} 

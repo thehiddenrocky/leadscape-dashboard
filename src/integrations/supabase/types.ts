@@ -255,6 +255,36 @@ export type Database = {
         }
         Relationships: []
       }
+      improvement_areas: {
+        Row: {
+          category: string
+          created_at: string
+          date_identified: string
+          description: string
+          id: string
+          source_url: string | null
+          status: string | null
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          date_identified?: string
+          description: string
+          id?: string
+          source_url?: string | null
+          status?: string | null
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          date_identified?: string
+          description?: string
+          id?: string
+          source_url?: string | null
+          status?: string | null
+        }
+        Relationships: []
+      }
       leads: {
         Row: {
           company_logo: string
