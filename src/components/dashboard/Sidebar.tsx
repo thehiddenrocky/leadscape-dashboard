@@ -1,4 +1,4 @@
-import { Home, Users, Bell, Settings, LineChart, DollarSign, TrendingUp, BarChart2, Menu } from "lucide-react";
+import { Home, Users, Bell, Settings, LineChart, DollarSign, TrendingUp, BarChart2, Menu, FileText, Briefcase, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface SidebarProps {
@@ -70,6 +70,24 @@ const Sidebar = ({ onClose, onNavigate, activeView }: SidebarProps) => {
           label="Quality Metrics" 
           active={activeView === "quality-metrics"}
           onClick={() => handleNavigation("quality-metrics")}
+        />
+        <SidebarItem 
+          icon={<FileText size={20} />} 
+          label="Reports" 
+          active={activeView === "reports"}
+          onClick={() => handleNavigation("reports")}
+        />
+        <SidebarItem 
+          icon={<Briefcase size={20} />} 
+          label="Projects" 
+          active={activeView === "projects"}
+          onClick={() => handleNavigation("projects")}
+        />
+        <SidebarItem 
+          icon={<Phone size={20} />} 
+          label="Support" 
+          active={activeView === "support"}
+          onClick={() => handleNavigation("support")}
         />
         <SidebarItem 
           icon={<Bell size={20} />} 
