@@ -44,11 +44,29 @@ const TelecomIndustryTable = () => {
       <div className="p-6">
         <h2 className="text-white text-xl font-semibold mb-4">Telecom Industry Analysis</h2>
       </div>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto scrollbar-container">
+        <style jsx>{`
+          .scrollbar-container::-webkit-scrollbar {
+            height: 12px;
+            background-color: #2d2d2d;
+          }
+          .scrollbar-container::-webkit-scrollbar-thumb {
+            background-color: #FF69B4;
+            border-radius: 6px;
+            border: 2px solid #2d2d2d;
+          }
+          .scrollbar-container::-webkit-scrollbar-thumb:hover {
+            background-color: #ff4da6;
+          }
+          .scrollbar-container::-webkit-scrollbar-track {
+            background-color: #2d2d2d;
+            border-radius: 6px;
+          }
+        `}</style>
         <Table>
           <TableHeader>
             <TableRow className="bg-gray-900">
-              <TableHead className="text-gray-400 whitespace-normal min-w-[120px]">Provider</TableHead>
+              <TableHead className="text-gray-400 whitespace-normal min-w-[120px] sticky left-0 bg-gray-900 z-10">Provider</TableHead>
               <TableHead className="text-gray-400 whitespace-normal min-w-[100px]">Network Reliability</TableHead>
               <TableHead className="text-gray-400 whitespace-normal min-w-[100px]">Download Speed</TableHead>
               <TableHead className="text-gray-400 whitespace-normal min-w-[200px]">Coverage</TableHead>
@@ -60,7 +78,7 @@ const TelecomIndustryTable = () => {
           <TableBody>
             {metrics?.map((item) => (
               <TableRow key={item.id} className="hover:bg-gray-900/50">
-                <TableCell className="text-white font-medium whitespace-normal min-w-[120px]">
+                <TableCell className="text-white font-medium whitespace-normal min-w-[120px] sticky left-0 bg-dashboard-card z-10">
                   {item.provider}
                 </TableCell>
                 <TableCell className="text-white whitespace-normal min-w-[100px]">
