@@ -321,6 +321,111 @@ export type Database = {
         }
         Relationships: []
       }
+      telecom_industry_analysis: {
+        Row: {
+          annual_investment: number | null
+          avg_wait_time: number | null
+          bundled_offerings: boolean | null
+          compliance_status: boolean | null
+          coverage_description: string
+          created_at: string
+          customer_service_rating: number | null
+          download_speed: string
+          fixed_broadband: boolean | null
+          focus_area: string | null
+          has_chat_support: boolean | null
+          has_email_support: boolean | null
+          has_local_centers: boolean | null
+          has_phone_support: boolean | null
+          has_self_service: boolean | null
+          has_social_media: boolean | null
+          id: string
+          innovative_services: string | null
+          last_audit_date: string | null
+          mobile_broadband: boolean | null
+          network_performance: number | null
+          network_reliability: number
+          non_compliance_issues: boolean | null
+          off_peak_wait: number | null
+          overall_satisfaction: number | null
+          peak_hours_wait: number | null
+          price_value: number | null
+          provider: string
+          rural_coverage: number | null
+          service_channels: string[] | null
+          suburban_coverage: number | null
+          urban_coverage: number | null
+        }
+        Insert: {
+          annual_investment?: number | null
+          avg_wait_time?: number | null
+          bundled_offerings?: boolean | null
+          compliance_status?: boolean | null
+          coverage_description: string
+          created_at?: string
+          customer_service_rating?: number | null
+          download_speed: string
+          fixed_broadband?: boolean | null
+          focus_area?: string | null
+          has_chat_support?: boolean | null
+          has_email_support?: boolean | null
+          has_local_centers?: boolean | null
+          has_phone_support?: boolean | null
+          has_self_service?: boolean | null
+          has_social_media?: boolean | null
+          id?: string
+          innovative_services?: string | null
+          last_audit_date?: string | null
+          mobile_broadband?: boolean | null
+          network_performance?: number | null
+          network_reliability: number
+          non_compliance_issues?: boolean | null
+          off_peak_wait?: number | null
+          overall_satisfaction?: number | null
+          peak_hours_wait?: number | null
+          price_value?: number | null
+          provider: string
+          rural_coverage?: number | null
+          service_channels?: string[] | null
+          suburban_coverage?: number | null
+          urban_coverage?: number | null
+        }
+        Update: {
+          annual_investment?: number | null
+          avg_wait_time?: number | null
+          bundled_offerings?: boolean | null
+          compliance_status?: boolean | null
+          coverage_description?: string
+          created_at?: string
+          customer_service_rating?: number | null
+          download_speed?: string
+          fixed_broadband?: boolean | null
+          focus_area?: string | null
+          has_chat_support?: boolean | null
+          has_email_support?: boolean | null
+          has_local_centers?: boolean | null
+          has_phone_support?: boolean | null
+          has_self_service?: boolean | null
+          has_social_media?: boolean | null
+          id?: string
+          innovative_services?: string | null
+          last_audit_date?: string | null
+          mobile_broadband?: boolean | null
+          network_performance?: number | null
+          network_reliability?: number
+          non_compliance_issues?: boolean | null
+          off_peak_wait?: number | null
+          overall_satisfaction?: number | null
+          peak_hours_wait?: number | null
+          price_value?: number | null
+          provider?: string
+          rural_coverage?: number | null
+          service_channels?: string[] | null
+          suburban_coverage?: number | null
+          urban_coverage?: number | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
