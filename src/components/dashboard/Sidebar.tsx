@@ -1,4 +1,4 @@
-import { Home, Users, Bell, LineChart, DollarSign, TrendingUp, BarChart2, Network } from "lucide-react";
+import { Home, Users, Bell, LineChart, DollarSign, TrendingUp, BarChart2, Network, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface SidebarProps {
