@@ -29,7 +29,7 @@ const LeadsTable = () => {
   const { data: leads, isLoading, error } = useQuery({
     queryKey: ['leads'],
     queryFn: fetchLeads,
-    retry: 1, // Reduce retry attempts for debugging
+    retry: 1,
   });
 
   console.log('LeadsTable render state:', { leads, isLoading, error });
@@ -79,7 +79,7 @@ const LeadsTable = () => {
                         <Avatar className="h-6 w-6 md:h-8 md:w-8">
                           <img src={lead.company_logo} alt={lead.company_name} />
                         </Avatar>
-                        <span className="text-white text-sm md:text-base">{lead.company_name}</span>
+                        <span className="text-white text-sm md:text-base font-medium">{lead.company_name}</span>
                       </div>
                     </td>
                     <td className="px-4 md:px-6 py-3">
@@ -87,11 +87,11 @@ const LeadsTable = () => {
                         <Avatar className="h-6 w-6 md:h-8 md:w-8">
                           <img src={lead.contact_avatar} alt={lead.contact_name} />
                         </Avatar>
-                        <span className="text-white text-sm md:text-base">{lead.contact_name}</span>
+                        <span className="text-white text-sm md:text-base font-medium">{lead.contact_name}</span>
                       </div>
                     </td>
                     <td className="px-4 md:px-6 py-3">
-                      <span className={`px-2 md:px-3 py-1 rounded-full text-xs md:text-sm ${
+                      <span className={`inline-flex px-2.5 py-1 rounded-full text-xs md:text-sm font-medium ${
                         lead.relevant_products > 0 
                           ? "bg-dashboard-success/10 text-dashboard-success" 
                           : "bg-gray-800 text-gray-400"
@@ -102,7 +102,12 @@ const LeadsTable = () => {
                       </span>
                     </td>
                     <td className="px-4 md:px-6 py-3">
-                      <span className="text-white text-sm md:text-base">{lead.instances} Locations</span>
+                      <div className="flex flex-col">
+                        <span className="text-white text-sm md:text-base font-medium">
+                          {lead.instances} {lead.instances === 1 ? 'Location' : 'Locations'}
+                        </span>
+                        <span className="text-gray-400 text-xs">Active Sites</span>
+                      </div>
                     </td>
                   </tr>
                 ))}
