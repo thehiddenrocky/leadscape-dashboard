@@ -27,12 +27,7 @@ const Index = () => {
       case "price-factors":
         return <PriceFactorsTable />;
       case "leads":
-        return (
-          <>
-            <div className="text-sm text-gray-400 mb-4 italic">Currently using mock data (recent business leads)</div>
-            <LeadsTable />
-          </>
-        );
+        return <LeadsTable />;
       case "network-performance":
         return <NetworkPerformanceTable />;
       case "customer-service":
@@ -49,7 +44,6 @@ const Index = () => {
         return (
           <Card className="p-6">
             <h2 className="text-2xl font-bold mb-4 text-white">System Alerts</h2>
-            <div className="text-sm text-gray-400 mb-4 italic">Currently using mock data</div>
             <div className="space-y-4">
               <AlertBanner 
                 title="Alert: 3 New Business Opportunities in Forssa Region"
@@ -93,7 +87,6 @@ const Index = () => {
               />
             </div>
 
-            <div className="text-sm text-gray-400 mb-4 italic">Currently using mock data (recent business leads)</div>
             <LeadsTable />
           </>
         );
