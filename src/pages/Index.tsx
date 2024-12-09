@@ -6,7 +6,6 @@ import LeadsTable from "@/components/dashboard/LeadsTable";
 import ServicePricingTable from "@/components/dashboard/ServicePricingTable";
 import MarketAnalysisTable from "@/components/dashboard/MarketAnalysisTable";
 import PriceFactorsTable from "@/components/dashboard/PriceFactorsTable";
-import ServiceQualityTable from "@/components/dashboard/ServiceQualityTable";
 import NetworkPerformanceTable from "@/components/dashboard/NetworkPerformanceTable";
 import CustomerServiceTable from "@/components/dashboard/CustomerServiceTable";
 import TelecomIndustryTable from "@/components/dashboard/TelecomIndustryTable";
@@ -28,9 +27,12 @@ const Index = () => {
       case "price-factors":
         return <PriceFactorsTable />;
       case "leads":
-        return <LeadsTable />;
-      case "quality-metrics":
-        return <ServiceQualityTable />;
+        return (
+          <>
+            <div className="text-sm text-gray-400 mb-4 italic">Currently using mock data (recent business leads)</div>
+            <LeadsTable />
+          </>
+        );
       case "network-performance":
         return <NetworkPerformanceTable />;
       case "customer-service":
@@ -47,18 +49,22 @@ const Index = () => {
         return (
           <Card className="p-6">
             <h2 className="text-2xl font-bold mb-4 text-white">System Alerts</h2>
+            <div className="text-sm text-gray-400 mb-4 italic">Currently using mock data</div>
             <div className="space-y-4">
+              <AlertBanner 
+                title="Alert: 3 New Business Opportunities in Forssa Region"
+                message="Increased fiber connectivity demand detected in Southwest Finland"
+                showMockData={true}
+              />
               <AlertBanner 
                 title="Network Maintenance Scheduled"
                 message="Routine maintenance planned for next week in Helsinki region"
+                showMockData={true}
               />
               <AlertBanner 
                 title="New Service Area"
                 message="Network coverage expanded in Tampere industrial district"
-              />
-              <AlertBanner 
-                title="System Update"
-                message="Platform updates scheduled for implementation this weekend"
+                showMockData={true}
               />
             </div>
           </Card>
@@ -69,6 +75,7 @@ const Index = () => {
             <AlertBanner 
               title="Alert: 3 New Business Opportunities in Forssa Region"
               message="Increased fiber connectivity demand detected in Southwest Finland"
+              showMockData={true}
             />
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -86,6 +93,7 @@ const Index = () => {
               />
             </div>
 
+            <div className="text-sm text-gray-400 mb-4 italic">Currently using mock data (recent business leads)</div>
             <LeadsTable />
           </>
         );

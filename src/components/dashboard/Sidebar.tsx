@@ -65,12 +65,6 @@ const Sidebar = ({ onClose, onNavigate, activeView }: SidebarProps) => {
           onClick={() => handleNavigation("price-factors")}
         />
         <SidebarItem 
-          icon={<BarChart2 size={20} />} 
-          label="Quality Metrics" 
-          active={activeView === "quality-metrics"}
-          onClick={() => handleNavigation("quality-metrics")}
-        />
-        <SidebarItem 
           icon={<Network size={20} />} 
           label="Network Performance" 
           active={activeView === "network-performance"}
@@ -90,7 +84,7 @@ const Sidebar = ({ onClose, onNavigate, activeView }: SidebarProps) => {
         />
         <SidebarItem 
           icon={<MessageSquare size={20} />} 
-          label="Lounea Feedback" 
+          label="What people say about Lounea" 
           active={activeView === "lounea-feedback"}
           onClick={() => handleNavigation("lounea-feedback")}
         />
