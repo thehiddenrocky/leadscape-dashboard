@@ -27,7 +27,12 @@ const Index = () => {
       case "price-factors":
         return <PriceFactorsTable />;
       case "leads":
-        return <LeadsTable />;
+        return (
+          <div>
+            <LeadsTable />
+            <div className="text-sm text-gray-400 mt-4 italic">**currently using mock data</div>
+          </div>
+        );
       case "network-performance":
         return <NetworkPerformanceTable />;
       case "customer-service":
@@ -88,6 +93,7 @@ const Index = () => {
             </div>
 
             <LeadsTable />
+            <div className="text-sm text-gray-400 mt-4 italic">**currently using mock data</div>
           </>
         );
     }

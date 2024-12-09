@@ -18,9 +18,6 @@ const AlertBanner = ({ title, message, showMockData = false }: AlertBannerProps)
           <p className="text-gray-400">{message} **</p>
         </div>
       </div>
-      {showMockData && (
-        <div className="text-sm text-gray-400 mt-4 italic">**currently using mock data</div>
-      )}
     </div>
   );
 };
